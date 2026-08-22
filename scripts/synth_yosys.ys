@@ -1,0 +1,10 @@
+read_verilog -sv rtl/alu.sv rtl/regfile.sv rtl/decoder.sv rtl/rv32i_core.sv
+hierarchy -check -top rv32i_core
+proc
+opt
+memory
+opt
+techmap
+opt
+stat
+write_json build/rv32i_core.json
